@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            Amount
+        </th>
+        <th>
+            Form Currency
+        </th>
+        <th>
+            To Currency
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input style="width: 200px" type="text" name="Ten" id="dauvao">
+        </td>
+        <td>
+            <select style="width: 150px" id="Chon1">
+                <option value="1">Đồng VND</option>
+                <option value="2">Đồng USD</option>
+        </td>
+        <td>
+            <select style="width: 150px" id="Chon2">
+                <option value="1">Đồng VND</option>
+                <option value="2">Đồng USD</option>
+        </td>
+        <td>
+            <button onclick="Lamluon1()" style="width: 100px" type="submit" >
+                Convert
+            </button>
+        </td>
+    </tr>
+    <p>
+
+    </p id="p1">
+    <script>
+        function Lamluon1() {
+            let giatrivao = document.getElementById('dauvao').value
+            let luachon1 = document.getElementById('Chon1').value
+            let luachon2 = document.getElementById('Chon2').value
+            if (luachon1 == luachon2) {
+                document.getElementById('p1').innerHTML= giatrivao;
+            }
+            if (luachon1 == "1" && luachon2 == "2") {
+                document.getElementById('p1').innerHTML= giatrivao / 24000
+            }
+            if (luachon1 == "2" && luachon2 == "1") {
+                document.getElementById('p1').innerHTML= giatrivao * 24000
+            }
+        }
+    </script>
+</table>
+
+</body>
+</html>
