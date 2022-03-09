@@ -5,12 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<button type="button" onclick="HienthiTin()">
-    An vao day</button>
+<h1 id="a">
+    Lớp c0222h1
+</h1>
+<input type="text" id="c">
+<button id="b" onclick="bam()"> click</button>
 <script>
-    function HienthiTin(){
-        alert('Xin Chao')
+    function bam(){
+        document.getElementById("a").innerHTML=document.getElementById("c").value;
+
     }
 </script>
+
 </body>
 </html>
