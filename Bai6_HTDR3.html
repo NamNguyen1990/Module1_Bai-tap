@@ -5,19 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+<button type="button" onclick="showMessage();">Click Me!</button>
 <script>
-
-    var a;
-    var b;
-    var c;
-    a = prompt("Nhập làm gì");
-    b = prompt("Nhập sai ah");
-    c = a%b ;
-    if (c === 0){
-        alert('a là bội')
-    }
-    else {
-        alert('a không phải bội')
+    function showMessage(){
+        document.write('Xin chào!');
     }
 </script>
 </body>
