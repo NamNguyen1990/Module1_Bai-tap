@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="text" style="width: 100px">
+<button onclick="Hien()" type="submit"> Tính số ngày</button>
+<script>
+    function Hien(){
+        let b = document.getElementById('a').value
+        if (b==1 || b==3 || b==5 || b==7 || b==8 || b==10 || b==12)
+            document.write('Tháng có 31 ngày ')
+        else if (b==2)
+            document.write('Tháng có 28 hoặc 29 ngày')
+        else if (b==4 || b==6 || b==9 || b==11)
+            document.write('Tháng có 30 ngày')
+        else
+            document.write('Không có tháng này')
+    }
+
+</script>
+</body>
+</html>
