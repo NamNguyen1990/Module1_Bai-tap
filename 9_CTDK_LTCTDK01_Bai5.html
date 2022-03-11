@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Điểm bài kiểm tra</th>
+        <th>Điểm thi giữa kỳ</th>
+        <th>Điểm thi cuối kỳ</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            <input id="DauVao1" type="number">
+        </td>
+        <td>
+            <input id="DauVao2" type="number">
+        </td>
+        <td>
+            <input id="DauVao3" type="number">
+        </td>
+        <td>
+            <button onclick="ThucThi()" type="submit">Tính</button>
+        </td>
+    </tr>
+</table>
+<h3 id="HT"></h3>
+<script>
+    function ThucThi() {
+        let a = +document.getElementById('DauVao1').value
+        let b = +document.getElementById('DauVao2').value
+        let c = +document.getElementById('DauVao3').value
+        let d = (a+b+c)/3
+        if (d<3) {
+            document.getElementById('HT').innerHTML = "Xếp loại kém"
+        }
+    }
+
+
+</script>
+</body>
+</html>
