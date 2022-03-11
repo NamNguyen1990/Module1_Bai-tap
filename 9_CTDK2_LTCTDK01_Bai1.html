@@ -15,10 +15,10 @@
         let a = document.getElementById('DauVao1').value
         let b = document.getElementById('DauVao2').value
         if (a%b==0) {
-            document.getElementById('HT').innerHTML = 'Số 1 chia hết cho số 2'
+            document.getElementById('HT').innerHTML = +a + " " + 'chia hết cho '+ +b
         }
         else
-            document.getElementById('HT').innerHTML = 'Số 1 không chia hết cho số 2'
+            document.getElementById('HT').innerHTML = +a + " " + 'không chia hết cho '+ +b
     }
 </script>
 </body>
