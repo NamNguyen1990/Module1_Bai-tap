@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="DauVao" type="text">
+<button onclick="ThucThi()" type="submit"> Kết Quả</button>
+<h3 id="HT"></h3>
+<script>
+  function ThucThi() {
+    let a = document.getElementById('DauVao').value
+    if (a<16) {
+    document.getElementById('HT').innerHTML = 'Tuổi học sinh không đủ điều kiện học lớp 10'
+    }
+  }
+
+</script>
+</body>
+</html>
