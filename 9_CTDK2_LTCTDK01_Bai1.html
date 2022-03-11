@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="DauVao1" type="text">
+<input id="DauVao2" type="text">
+<button onclick="ThucThi()"> Kết Quả </button>
+<p id="HT">Mời bạn nhập vào giá trị tại 2 ô trống</p>
+
+<script>
+    function ThucThi() {
+        let a = document.getElementById('DauVao1').value
+        let b = document.getElementById('DauVao2').value
+        if (a%b==0) {
+            document.getElementById('HT').innerHTML = 'Số 1 chia hết cho số 2'
+        }
+        else
+            document.getElementById('HT').innerHTML = 'Số 1 không chia hết cho số 2'
+    }
+</script>
+</body>
+</html>
