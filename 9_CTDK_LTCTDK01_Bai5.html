@@ -35,10 +35,21 @@
         let c = +document.getElementById('DauVao3').value
         let d = (a+b+c)/3
         if (d<3) {
-            document.getElementById('HT').innerHTML = "Xếp loại kém"
+            document.getElementById('HT').innerHTML = "Xếp loại Ké́m"
         }
-    }
+        else if (d<5) {
+            document.getElementById('HT').innerHTML = 'Xếp loại Yếu'
+        }
+        else if (d<=6) {
+            document.getElementById('HT').innerHTML = 'Xếp loại Trung bình'
+        }
+        else if (d<8) {
+            document.getElementById('HT').innerHTML = 'Xếp loại Khá'
+        }
+        else
+            document.getElementById('HT').innerHTML = 'Xếp loại Giỏi'
 
+    }
 
 </script>
 </body>
