@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            Tên Khách Hàng
+        </th>
+        <th>
+            Số phút đã gọi
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input id="DauVao1" type="text">
+        </td>
+        <td>
+            <input id="DauVao2" type="number">
+        </td>
+        <td>
+            <button onclick="ThucThi()" type="submit">Tính</button>
+        </td>
+    </tr>
+</table>
+<h2 id="HT"></h2>
+<h3 id="HT1"></h3>
+<script>
+    function ThucThi() {
+        let T = document.getElementById('DauVao1').value
+        document.getElementById('HT').innerHTML = ('Khách hàng:' + ' ' + T)
+        let Phut = +document.getElementById('DauVao2').value
+        let ST
+        if (Phut === 0) {
+            ST = 25000
+            document.getElementById('HT1').innerHTML = ('Số tiền cần thanh toán:' + ' ' + ST)
+        }
+
+        else if (Phut<=50) {
+            ST = 25000 + 600*Phut
+            document.getElementById('HT1').innerHTML = ('Số tiền cần thanh toán:' + ' ' + ST)
+        }
+        else if (Phut<150) {
+            ST = 25000 + 50*600 + (Phut-50)*400
+            document.getElementById('HT1').innerHTML = ('Số tiền cần thanh toán:' + ' ' + ST)
+        }
+        else {
+            ST = 25000 + 50*600 + (Phut-50)*400
+            document.getElementById('HT1').innerHTML = ('Số tiền cần thanh toán:' + ' ' + ST)
+        }
+    }
+
+</script>
+<p>Tính cước điện thoại <br>
+    Phí thuê bao bắt buộc là 25 nghìn.<br>
+    600 đồng cho mỗi phút gọi của 50 phút đầu tiên.<br>
+    400 đồng cho mỗi phút gọi của 150 phút tiếp theo.<br>
+    200 đồng cho bất kỳ mỗi phút nào sau 150 phút.<br>
+</p>
+</body>
+</html>
