@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style ></style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            Nhập họ tên nhân viên
+        </th>
+        <th>
+            Nhập Lương cơ bản của nhân viên (Triệu)
+        </th>
+        <th>
+            Nhập Hoa Hồng của nhân viên (Triệu)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input id="DauVao1" type="text" style="width: 200px">
+        </td>
+        <td>
+            <input id="DauVao2" type="number" style="width: 300px">
+        </td>
+        <td>
+            <input id="DauVao3" type="number" style="width: 300px">
+        </td>
+        <td>
+            <button onclick="ThucThi()" type="submit"> Tính Lương</button>
+        </td>
+    </tr>
+</table>
+<h2 id="HT"></h2>
+<h3 id="HT1"></h3>
+<script>
+    function ThucThi() {
+        let Hien1 = document.getElementById('DauVao1').value
+        document.getElementById('HT').innerHTML = (Hien1)
+        let a = +document.getElementById('DauVao2').value
+        let b = +document.getElementById('DauVao3').value
+        let L
+        if (0<b<=8) {
+            L = (a + b*5/100)
+            document.getElementById('HT1').innerHTML = ('Lương thực lĩnh là:' + ' '+L)
+        }
+        if (b<15) {
+            L = (a + b*10/100)
+            document.getElementById('HT1').innerHTML = ('Lương thực lĩnh là:' + ' '+L)
+        }
+        if (b<25) {
+            L = (a + b*15/100)
+            document.getElementById('HT1').innerHTML = ('Lương thực lĩnh là:' + ' '+L)
+        }
+        if (b<40) {
+            L = (a + b*20/100)
+            document.getElementById('HT1').innerHTML = ('Lương thực lĩnh là:' + ' '+L)
+        }
+        if (b>=40) {
+            L = (a + b*30/100)
+            document.getElementById('HT1').innerHTML = ('Lương thực lĩnh là:' + ' '+L)
+        }
+    }
+</script>
+<p> NOTE: Đề bài: Nhập và hiển thị tên Nhân viên cùng công thức tính lương như sau:</p>
+<p> Nhập lương cứng của Nhân viên <br>
+    Nhập hoa hồng của Nhân viên <br>
+    Lương thực lĩnh = Lương cứng + Hoa Hồng<br>
+</p>
+<p>
+    Công thức tính Hoa Hồng <br>
+    - Nếu Doanh thu là: 0 triệu - 8 triệu<br>
+    Hoa Hồng là: 5% của Doanh Thu<br>
+    - Nếu Doanh thu là: >8 -15 triệu<br>
+    Hoa Hoa Hồng là: 10% của Doanh Thu<br>
+    - Nếu Doanh thu là: >15 – 25 triệu<br>
+    Hoa Hoa Hồng là: 15% của Doanh Thu<br>
+    - Nếu Doanh thu là: > 25 – 40 triệu<br>
+    Hoa Hoa Hồng là: 20% của Doanh Thu<br>
+    - Nếu Doanh thu là:  > 40 triệu<br>
+    Hoa Hoa Hồng là: 30% của Doanh Thu<br>
+</p>
+</body>
+</html>
