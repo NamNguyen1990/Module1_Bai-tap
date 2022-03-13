@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+<th>
+    Nhập vào 1 số bất kỳ
+</th>
+    </tr>
+    <tr>
+        <td>
+            <input id="DauVao" type="number">
+        </td>
+        <td>
+            <button onclick="ThucThi()">Chuyển đổi</button>
+        </td>
+    </tr>
+</table>
+<h3 id="HT"></h3>
+<script>
+    function ThucThi() {
+        let a = document.getElementById('DauVao').value
+        if (a<0 || a>130) {
+            document.getElementById('HT').innerHTML = ('Số đã nhập không phải tuổi của 1 người')
+        }
+        else {
+            document.getElementById('HT').innerHTML = ('Số đã nhập là tuổi của 1 người')
+        }
+
+    }
+</script>
+</body>
+</html>
