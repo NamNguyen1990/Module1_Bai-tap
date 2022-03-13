@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="Anh" src="abc.png" width="300px" style="position: absolute ; top: 100px; left: 100px;">
+<button onclick="Phai()">Sang Phải</button>
+<button onclick="Trai()">Sang Trái</button>
+<button onclick="Xuong()">Đi Xuống</button>
+<button onclick="Len()">Đi Lên</button>
+<button onclick="CheoLenPhai()">Đi lên chéo phải</button>
+<button onclick="CheoXuongPhai()">Đi xuống chéo phải</button>
+<button onclick="CheoLenTrai()">Đi lên chéo trái</button>
+<button onclick="CheoXuongTrai()">Đi xuống chéo trái</button>
+<script>
+  let Anh = document.getElementById('Anh');
+  function Phai () {
+    Anh.style.left = parseInt(Anh.style.left) + 20 + 'px'
+  }
+  function Trai () {
+    Anh.style.left = parseInt(Anh.style.left) - 20 + 'px'
+  }
+  function Len () {
+    Anh.style.top = parseInt(Anh.style.top) - 20 + 'px'
+  }
+  function Xuong () {
+    Anh.style.top = parseInt(Anh.style.top) + 20 + 'px'
+  }
+  function CheoLenPhai() {
+    Anh.style.left = parseInt(Anh.style.left) + 20 + 'px'
+    Anh.style.top = parseInt(Anh.style.top) - 20 + 'px'
+  }
+  function CheoXuongPhai() {
+    Anh.style.left = parseInt(Anh.style.left) + 20 + 'px'
+    Anh.style.top = parseInt(Anh.style.top) + 20 + 'px'
+  }
+  function CheoLenTrai() {
+    Anh.style.top = parseInt(Anh.style.top) - 20 + 'px'
+    Anh.style.left = parseInt(Anh.style.left) - 20 + 'px'
+  }
+  function CheoXuongTrai() {
+    Anh.style.top = parseInt(Anh.style.top) + 20 + 'px'
+    Anh.style.left = parseInt(Anh.style.left) - 20 + 'px'
+  }
+</script>
+</body>
+</html>
