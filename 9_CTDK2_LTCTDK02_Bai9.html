@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            Nhập cạnh thứ nhất
+        </th>
+        <th>
+            Nhập cạnh thứ hai
+        </th>
+        <th>
+            Nhập cạnh thứ ba
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input id="DauVao1" type="number">
+        </td>
+        <td>
+            <input id="DauVao2" type="number">
+        </td>
+        <td>
+            <input id="DauVao3" type="number">
+        </td>
+        <td>
+            <button onclick="ThucThi()">
+                Kiểm tra
+            </button>
+        </td>
+    </tr>
+</table>
+<h3 id="HT"></h3>
+<script>
+    function ThucThi() {
+     let a = +document.getElementById('DauVao1').value
+     let b = +document.getElementById('DauVao2').value
+     let c = +document.getElementById('DauVao3').value
+     if (a<=0 || b<=0 || c<=0) {
+         document.getElementById('HT').innerHTML = ('3 số không phải là cạnh của 1 tam giác')
+     }
+     if (a+b>c && a+c>b && b+c>a) {
+       document.getElementById('HT').innerHTML = ('3 số là cạnh của 1 tam giác')
+     }
+    }
+</script>
+</body>
+</html>
