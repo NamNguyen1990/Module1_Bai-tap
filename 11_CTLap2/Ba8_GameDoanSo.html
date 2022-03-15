@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
-<button onclick="let a = prompt('Nhập a'); let b = prompt('Nhập b'); document.getElementById('demo').innerHTML = getRndInteger(+a,+b)">Click Me</button>
-
-<p id="demo"></p>
-
+<button onclick="but()">Chơi</button>
 <script>
-    Math.floor(Math.random() * (max - min + 1) ) + min;
+    function but() {
+        let a = parseInt(prompt('Nhập khoảng muốn bắt đầu: '));
+        let b = parseInt(prompt('Nhập khoảng muốn kết thúc: '));
+        let c = Math.floor(Math.random() * (b - a) + a);
+        for (i = 0; i < 3; i++) {
+            let d = prompt('Nhập số muốn chơi: ');
+            if (d==c){
+                alert('Win!');
+            } else if (d<c){
+                alert('Số nhỏ hơn!');
+            } else{
+                alert('Số lớn hơn!');
+            }
+        }
     }
-    let a = parseInt(prompt('Nhap so da chon'))
-    if (a<demo) {
-
-    }
-
 </script>
-
 </body>
 </html>
