@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Mời nhập số');
+    let So = [1,2,4,2,9,40,60,-12,-90];
+    let dem = 0;
+    let b = [];
+    for (let i=0; i<So.length; i++) {
+        if (a==So[i]) {
+            So.splice(i,1);
+            b = So;
+            dem = dem + 1;
+        }
+    }
+    if (dem == 0) {
+        document.write(a + ' ' + "không nằm trong mảng")
+    }
+    document.write(b + '<br>');
+
+</script>
+</body>
+</html>
