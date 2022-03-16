@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [2,5,-4,9,80,95,-8,9,-80,"Nam"];
+    let b = [8,"Linh",9,"Vy",50,-89,55,-7,44,32];
+    let c = [50,58,-89]
+    a.push(b);
+    let d = a
+    b.unshift(c);
+    let g = b
+    e = a.concat(c);
+    document.write(d + '<br>')
+    document.write(g + '<br>')
+    document.write(e + '<br>')
+    // Chú ý quan trọng:
+    // 1. unshift là gán mảng lên trên 1 mảng khác
+    //    push là gán mảng xuống dưới 1 mảng khác
+    //    Cả 2 phương thức này không được gán vào biến ngay mà chỉ được gán sau khi đã thực hiện thông qua 1 biến khác
+    // 2. concat là gán mảng vào sau 1 mảng khác nhưng đc phép gán luôn vào biến
+</script>
+
+</body>
+</html>
