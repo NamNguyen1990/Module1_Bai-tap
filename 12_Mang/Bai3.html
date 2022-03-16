@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let So = [1,2,3,-5,70];
+    let max = So[0];
+    let sum = 0;
+    let TB
+    for (let i=0; i<So.length; i++) {
+        sum = sum + So[i]
+        if (max<So[i]) {
+            max = So[i];
+        }
+    }
+    TB = sum/So.length;
+    document.write("Max =" + max + '<br>');
+    document.write('Trung bình =' + TB);
+</script>
+</body>
+</html>
