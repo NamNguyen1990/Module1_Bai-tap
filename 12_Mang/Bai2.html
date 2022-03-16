@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let So = [2,12,4,41,-5,-20,78,92,6626,-150];
+    let max = So[0];
+    let count = 0;
+    let j = 0;
+    for (let i=0; i<So.length; i++) {
+        if (max<So[i]) {
+            max = So[i];
+            j = i
+            count = count + 1;
+        }
+    }
+    document.write("Max =" + max + '<br>');
+    document.write("Vị trí số" + ' ' + j)
+</script>
+</body>
+</html>
