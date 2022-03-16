@@ -7,13 +7,17 @@
 <body>
 <script>
     let a = prompt('Mời nhập số');
-    let So = [1,2,4,7,9];
+    let So = [1,2,4,2,9];
+    let dem = 0
     for (let i=0; i<So.length; i++) {
         if (a==So[i]) {
             document.write(So[i] + "tại vị trí" + i);
+            dem = dem + 1;
         }
     }
-    document.write("-1")
+    if (dem == 0) {
+        document.write(-1)
+    }
 
 </script>
 </body>
