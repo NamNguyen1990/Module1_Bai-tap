@@ -6,9 +6,15 @@
 </head>
 <body>
 <script>
-    let a = prompt('Nhập số 1')
-    let b = prompt('Nhập số 2')
-
+    let a = prompt('Nhập số thứ 1');
+    let b = prompt('Nhập số thứ 2');
+    function change() {
+        c = a;
+        a = b;
+        b = c;
+        return ("Số thứ nhất: " + a + " Số thứ hai: " + b);
+    }
+    alert(change())
 </script>
 </body>
 </html>
