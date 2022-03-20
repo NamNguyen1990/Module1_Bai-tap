@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let KT = [];
+    let b = prompt('Mời nhập ký tự cần tìm')
+    let c = 0;
+    function KtraKyTu() {
+        for (let i=0; i<3; i++) {
+            let a = prompt('Mời nhập ký tự');
+            KT.push(a)
+            if (KT[i] == b) {
+                c = c+1;
+            }
+        }
+        if (c == 0) {
+            alert(-1)
+        }
+        return c;
+    }
+    alert(KtraKyTu())
+</script>
+</body>
+</html>
