@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Mời nhập số')
+    function KtraSoNguyenTo (snt) {
+        let check = "snt"
+        for (let i=2;i<a;i++) {
+            if (a%i == 0) {
+                check = "ko snt"
+            }
+        }
+        return check;
+    }
+    for (let j=2;j<10000;j++) {
+       if (KtraSoNguyenTo(a)) {
+           alert(KtraSoNguyenTo(a))
+           break
+       }
+    }
+
+
+</script>
+</body>
+</html>
