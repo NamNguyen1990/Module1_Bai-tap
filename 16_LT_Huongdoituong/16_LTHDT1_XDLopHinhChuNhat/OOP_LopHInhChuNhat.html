@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<body>
+<script>
+    function Rectangle (CD,CR) {
+        this.A = CD;
+        this.B = CR;
+        this.DT = function () {
+           return this.A*this.B;
+        }
+        this.CV = function () {
+            return (this.A+this.B)*2
+        }
+        this.Rec = function createRectangle() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0,0,150,50);
+        }
+    }
+
+    let ob = new Rectangle(5,10);
+    let kqDT = ob.DT();
+    let kqCV = ob.CV();
+    let kqRec = ob.Rec()
+    alert('DienTich =' +kqDT + ' ' + 'ChuVi =' + kqCV)
+</script>
+</body>
+</html>
