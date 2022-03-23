@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dua {
+            width: 1200px;
+            height: 1100px;
+            overflow: hidden;
+            border: 1px solid;
+        }
+    </style>
+
+</head>
+<body>
+<div class="dua">
+    <img id="w" src="DuongDua.png" alt="" style="width: 1200px; height: 1300px; position: relative; top: -200px; left: 0;">
+</div>
+<img src="Xedua1.png" id="a" style="position: absolute; top: 850px; left: 700px; width: 120px; height: 280px">
+<canvas id="myCanvas"></canvas>
+<script src="JS1.js"></script>
+<script>
+    let duong = document.getElementById('w');
+    function move() {
+        duong.style.top = parseInt(duong.style.top)+ 7 +'px';
+        requestAnimationFrame(move);
+        if (parseInt(duong.style.top) >=0) {
+            duong.style.top = -100+'px'
+        }
+    }
+    move();
+</script>
+<script>
+    let img = document.getElementById('a');
+    let speedX = 10;
+    let speedY = 10;
+    function di() {
+        img.style.left = parseInt(img.style.left) + speed + 'px'
+        img.style.top = parseInt(img.style.top) + speed + 'px'
+        if (parseInt(img.style.left) >= 1100 || parseInt(img.style.left) < 20) {
+            speedX = -speedX
+        }
+        if (parseInt(img.style.top) >= 950 || parseInt(img.style.top) < 20) {
+            speedY = -speedY
+        }
+    }
+
+</script>
+</body>
+</html>

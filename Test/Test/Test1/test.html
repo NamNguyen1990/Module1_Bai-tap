@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dua {
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<div class="dua">
+    <img id="w" src="DuongDua.png" alt="" style="width: 300px; height: 600px; position: relative; top: -100px; left: 0;">
+</div>
+<script>
+    let duong = document.getElementById('w');
+    function move() {
+        duong.style.top = parseInt(duong.style.top)+5 +'px';
+        requestAnimationFrame(move);
+        if (parseInt(duong.style.top) >=0) {
+           duong.style.top = -100+'px'
+        }
+    }
+    move();
+</script>
+</body>
+</html>
