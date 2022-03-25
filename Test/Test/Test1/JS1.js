@@ -7,7 +7,7 @@ function upArrowPressed() {
 
 function downArrowPressed() {
     let element = document.getElementById("a");
-    if (parseInt(img.style.top) < 850) {
+    if (parseInt(img.style.top) < 1550) {
         element.style.top = parseInt(element.style.top) + 20 + 'px';
     }
 }
@@ -23,6 +23,9 @@ function  rightArrowPressed () {
         element.style.left = parseInt(element.style.left) + 20 + 'px';
     }
 }
+
+
+
 function moveSelection(evt) {
     switch (evt.keyCode) {
         case 37 :

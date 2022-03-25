@@ -6,38 +6,92 @@
     <style>
         .dua {
             width: 1200px;
-            height: 1100px;
+            height: 1800px;
             overflow: hidden;
             border: 1px solid;
         }
     </style>
 
+
 </head>
 <body>
 <div class="dua">
-    <img id="w" src="DuongDua.png" alt="" style="width: 1200px; height: 1300px; position: relative; top: -200px; left: 0;">
+    <img id="w" src="DuongDua.png" alt=""
+         style="width: 1200px; height: 2000px; position: relative; top: -200px; left: 0;">
 </div>
-<img src="Xedua1.png" id="a" style="position: absolute; top: 850px; left: 700px; width: 120px; height: 280px">
+<img src="Xedua1.png" id="a" style="position: absolute; top: 1200px; left: 700px; width: 120px; height: 280px">
+<img src="Xedua2.png" id="b" style="position: absolute; top: -100px; left: 10px; width: 120px; height: 280px">
+<img src="Xedua3.png" id="c" style="position: absolute; top: -150px; left: 300px; width: 120px; height: 280px">
+<img src="Xedua4.png" id="d" style="position: absolute; top: -200px; left: 700px; width: 120px; height: 280px">
+<img src="Xedua5.png" id="e" style="position: absolute; top: -180px; left: 1050px; width: 120px; height: 280px">
 <canvas id="myCanvas"></canvas>
 <script src="JS1.js"></script>
 <script>
     let duong = document.getElementById('w');
+    let element = document.getElementById("a");
+    let xe2 = document.getElementById('b');
+    let xe3 = document.getElementById('c');
+    let xe4 = document.getElementById('d');
+    let xe5 = document.getElementById('e');
+    let img = document.getElementById('a');
+    let speedX = 20;
+    let speedY = 20;
+
     function move() {
-        duong.style.top = parseInt(duong.style.top)+ 7 +'px';
+        duong.style.top = parseInt(duong.style.top) + 7 + 'px';
         requestAnimationFrame(move);
-        if (parseInt(duong.style.top) >=0) {
-            duong.style.top = -100+'px'
+        if (parseInt(duong.style.top) >= 0) {
+            duong.style.top = -200 + 'px'
+        }
+        checkVaCham(element, xe2)
+        checkVaCham(element, xe3)
+        checkVaCham(element, xe4)
+        checkVaCham(element, xe5)
+    }
+
+    function di2() {
+        xe2.style.top = parseInt(xe2.style.top) + RandomSpeed() + 'px';
+        requestAnimationFrame(di2);
+        if (parseInt(xe2.style.top) >= 1700) {
+            xe2.style.top = RandomTop() + 'px'
         }
     }
-    move();
-</script>
-<script>
-    let img = document.getElementById('a');
-    let speedX = 10;
-    let speedY = 10;
+
+    function di3() {
+        xe3.style.top = parseInt(xe3.style.top) + RandomSpeed() + 'px';
+        requestAnimationFrame(di3);
+        if (parseInt(xe3.style.top) >= 1700) {
+            xe3.style.top = RandomTop() + 'px'
+        }
+    }
+
+    function di4() {
+        xe4.style.top = parseInt(xe4.style.top) + RandomSpeed() + 'px';
+        requestAnimationFrame(di4);
+        if (parseInt(xe4.style.top) >= 1700) {
+            xe4.style.top = RandomTop() + 'px'
+        }
+    }
+
+    function di5() {
+        xe5.style.top = parseInt(xe5.style.top) + RandomSpeed() + 'px';
+        requestAnimationFrame(di5);
+        if (parseInt(xe5.style.top) >= 1700) {
+            xe5.style.top = RandomTop() + 'px'
+        }
+    }
+
+    function RandomTop() {
+        return Math.random() * -400;
+    }
+
+    function RandomSpeed() {
+        return Math.random() * 25;
+    }
+
     function di() {
-        img.style.left = parseInt(img.style.left) + speed + 'px'
-        img.style.top = parseInt(img.style.top) + speed + 'px'
+        img.style.left = parseInt(img.style.left) + speedX + 'px'
+        img.style.top = parseInt(img.style.top) + speedY + 'px'
         if (parseInt(img.style.left) >= 1100 || parseInt(img.style.left) < 20) {
             speedX = -speedX
         }
@@ -46,6 +100,27 @@
         }
     }
 
+    function checkVaCham(oto, vatcan) {
+        let T1 = parseInt(oto.style.top);
+        let L1 = parseInt(oto.style.left);
+        let R1 = parseInt(oto.style.width) + L1;
+        let B1 = parseInt(oto.style.height) + T1;
+        let L2 = parseInt(vatcan.style.left);
+        let T2 = parseInt(vatcan.style.left);
+        let R2 = parseInt(vatcan.style.width) + L2;
+        let B2 = parseInt(vatcan.style.height) + T2;
+        // if ( T1 <= B2 && L1 >= L2) {
+        //     console.log(1)
+        // }
+    }
+
+    move();
+    di2()
+    di3()
+    di4()
+    di5()
 </script>
+
+
 </body>
 </html>
